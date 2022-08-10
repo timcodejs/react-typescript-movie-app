@@ -26,16 +26,16 @@ function App() {
   if (loading) return <LinearProgress />;
 
   return (
-    <Wrapper className='App'>
+    <Wrapper className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomeMain />}></Route>
-          <Route path='/popular' element={<PopularMain />}></Route>
-          <Route path='/nowplaying' element={<NowplayingMain />}></Route>
-          <Route path='/upcoming' element={<UpcomingMain />}></Route>
-          <Route path='/topLate' element={<ToplateMain />}></Route>
-          <Route path='/detail' element={<MovieDetail />}></Route>
-          <Route path='/search' element={<SearchMain />}></Route>
+          <Route path="/" element={<HomeMain />}></Route>
+          <Route path="/popular" element={<PopularMain />}></Route>
+          <Route path="/nowplaying" element={<NowplayingMain />}></Route>
+          <Route path="/upcoming" element={<UpcomingMain />}></Route>
+          <Route path="/topLate" element={<ToplateMain />}></Route>
+          <Route path="/detail" element={<MovieDetail />}></Route>
+          <Route path="/search" element={<SearchMain />}></Route>
         </Routes>
       </BrowserRouter>
     </Wrapper>
