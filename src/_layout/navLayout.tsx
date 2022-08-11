@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Button, TextField } from '@material-ui/core';
 import { SEARCH_ALLPOSTS_REQUEST } from '../types/scarchTypes';
 
 const NavLayout = ({ children }: React.PropsWithChildren<unknown>) => {
@@ -29,33 +30,44 @@ const NavLayout = ({ children }: React.PropsWithChildren<unknown>) => {
 
   return (
     <div>
-      <ul>
+      <ul className='nav'>
         <li>
-          <Link to='/'>Home</Link>
+          <Button variant='contained' color='primary'>
+            <Link to='/'>Home</Link>
+          </Button>
         </li>
         <li>
-          <Link to='/popular'>인기</Link>
+          <Button variant='contained' color='primary'>
+            <Link to='/popular'>인기</Link>
+          </Button>
         </li>
         <li>
-          <Link to='/nowplaying'>현재 상영 중</Link>
+          <Button variant='contained' color='primary'>
+            <Link to='/nowplaying'>현재 상영 중</Link>
+          </Button>
         </li>
         <li>
-          <Link to='/upcoming'>개봉 예정</Link>
+          <Button variant='contained' color='primary'>
+            <Link to='/upcoming'>개봉 예정</Link>
+          </Button>
         </li>
         <li>
-          <Link to='/topLate'>높은 평점</Link>
+          <Button variant='contained' color='primary'>
+            <Link to='/topLate'>높은 평점</Link>
+          </Button>
         </li>
         <li>
           <form onSubmit={submit}>
-            <input
-              type='text'
-              name='search'
-              id='search'
-              placeholder='영화 이름 검색'
+            <TextField
+              id='standard-basic'
+              label='영화 이름 검색'
+              variant='standard'
               value={name}
               onChange={handler}
             />
-            <button type='submit'>검색</button>
+            <Button variant='contained' type='submit' color='primary'>
+              검색
+            </Button>
           </form>
         </li>
       </ul>
