@@ -12,6 +12,12 @@ export const Wrapper = styled.div`
         color: #000;
         text-decoration: none;
     }
+    .nav {
+        align-items: flex-end;
+    }
+    .nav a {
+        color: #fff;
+    }
     & ul {
         padding: 0;
         margin: 0;
@@ -26,10 +32,11 @@ export const Wrapper = styled.div`
         list-style: none;
         border-radius: 5px;
         margin: 10px;
+    }
+    & .movie_list li {
         box-shadow: 5px 5px 5px #d9d9d9;
     }
-
-    & li div:nth-child(1) {
+    & .movie_list li div:nth-child(1) {
         width: 200px;
         height: 300px;
         border-top-left-radius: 5px;
@@ -39,7 +46,7 @@ export const Wrapper = styled.div`
         justify-content: center;
     }
 
-    & li div:nth-child(2) {
+    & .movie_list li div:nth-child(2) {
         border-top: 1px solid #d9d9d9;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -68,5 +75,10 @@ export const Wrapper = styled.div`
 
     & img {
         height: 100%;
+    }
+
+    form {
+        display: flex;
+        align-items: end;
     }
 `;

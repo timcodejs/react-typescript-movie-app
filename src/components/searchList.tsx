@@ -13,7 +13,7 @@ const SearchList = () => {
   return (
     <>
       <h3>검색 결과 : {query}</h3>
-      <SearchListStyled>
+      <SearchListStyled className='movie_list'>
         {search.map((item: SearchType) => (
           <li key={item.id} onClick={() => handler(item)}>
             <div>
