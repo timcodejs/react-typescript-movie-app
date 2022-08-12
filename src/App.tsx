@@ -29,16 +29,34 @@ function App() {
     <Wrapper className='App'>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path='/movieapp' element={<HomeMain />}></Route>
-          <Route path='/movieapp/popular' element={<PopularMain />}></Route>
           <Route
-            path='/movieapp/nowplaying'
+            path='/react-typescript-movie-app'
+            element={<HomeMain />}
+          ></Route>
+          <Route
+            path='/react-typescript-movie-app/popular'
+            element={<PopularMain />}
+          ></Route>
+          <Route
+            path='/react-typescript-movie-app/nowplaying'
             element={<NowplayingMain />}
           ></Route>
-          <Route path='/movieapp/upcoming' element={<UpcomingMain />}></Route>
-          <Route path='/movieapp/topLate' element={<ToplateMain />}></Route>
-          <Route path='/movieapp/detail' element={<MovieDetail />}></Route>
-          <Route path='/movieapp/search' element={<SearchMain />}></Route>
+          <Route
+            path='/react-typescript-movie-app/upcoming'
+            element={<UpcomingMain />}
+          ></Route>
+          <Route
+            path='/react-typescript-movie-app/topLate'
+            element={<ToplateMain />}
+          ></Route>
+          <Route
+            path='/react-typescript-movie-app/detail'
+            element={<MovieDetail />}
+          ></Route>
+          <Route
+            path='/react-typescript-movie-app/search'
+            element={<SearchMain />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </Wrapper>
