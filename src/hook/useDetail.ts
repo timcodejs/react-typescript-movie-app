@@ -7,7 +7,7 @@ export const useDetail = (initialValue: undefined | null = null) => {
     const navigate = useNavigate();
 
     const handler = useCallback((e: MovieType | SearchType) => {
-        navigate('/detail', {state: e});
+        navigate('/movieapp/detail', {state: e});
     }, [navigate]);
 
     return handler;

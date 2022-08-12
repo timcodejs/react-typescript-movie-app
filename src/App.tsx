@@ -26,16 +26,19 @@ function App() {
   if (loading) return <LinearProgress />;
 
   return (
-    <Wrapper className="App">
-      <BrowserRouter>
+    <Wrapper className='App'>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<HomeMain />}></Route>
-          <Route path="/popular" element={<PopularMain />}></Route>
-          <Route path="/nowplaying" element={<NowplayingMain />}></Route>
-          <Route path="/upcoming" element={<UpcomingMain />}></Route>
-          <Route path="/topLate" element={<ToplateMain />}></Route>
-          <Route path="/detail" element={<MovieDetail />}></Route>
-          <Route path="/search" element={<SearchMain />}></Route>
+          <Route path='/movieapp' element={<HomeMain />}></Route>
+          <Route path='/movieapp/popular' element={<PopularMain />}></Route>
+          <Route
+            path='/movieapp/nowplaying'
+            element={<NowplayingMain />}
+          ></Route>
+          <Route path='/movieapp/upcoming' element={<UpcomingMain />}></Route>
+          <Route path='/movieapp/topLate' element={<ToplateMain />}></Route>
+          <Route path='/movieapp/detail' element={<MovieDetail />}></Route>
+          <Route path='/movieapp/search' element={<SearchMain />}></Route>
         </Routes>
       </BrowserRouter>
     </Wrapper>
