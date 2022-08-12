@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Wrapper } from './App.style';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { LOAD_ALLPOSTS_REQUEST } from './types/movieTypes';
 import { useDispatch, useSelector } from 'react-redux';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -27,38 +27,17 @@ function App() {
 
   return (
     <Wrapper className='App'>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route
-            path='/react-typescript-movie-app'
-            element={<HomeMain />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/popular'
-            element={<PopularMain />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/nowplaying'
-            element={<NowplayingMain />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/upcoming'
-            element={<UpcomingMain />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/topLate'
-            element={<ToplateMain />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/detail'
-            element={<MovieDetail />}
-          ></Route>
-          <Route
-            path='/react-typescript-movie-app/search'
-            element={<SearchMain />}
-          ></Route>
+          <Route path='/' element={<HomeMain />}></Route>
+          <Route path='/popular' element={<PopularMain />}></Route>
+          <Route path='/nowplaying' element={<NowplayingMain />}></Route>
+          <Route path='/upcoming' element={<UpcomingMain />}></Route>
+          <Route path='/topLate' element={<ToplateMain />}></Route>
+          <Route path='/detail' element={<MovieDetail />}></Route>
+          <Route path='/search' element={<SearchMain />}></Route>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </Wrapper>
   );
 }

@@ -2,6 +2,7 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://timcodejs.github.io/react-typescript-movie-app",
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
@@ -60,7 +61,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://timcodejs.github.io",
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }

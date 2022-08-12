@@ -23,7 +23,7 @@ const NavLayout = ({ children }: React.PropsWithChildren<unknown>) => {
           query: name,
         },
       });
-      navigate('/react-typescript-movie-app/search');
+      navigate('/search');
     },
     [name]
   );
@@ -33,29 +33,27 @@ const NavLayout = ({ children }: React.PropsWithChildren<unknown>) => {
       <ul className='nav'>
         <li>
           <Button variant='contained' color='primary'>
-            <Link to='/react-typescript-movie-app'>Home</Link>
+            <Link to='/'>Home</Link>
           </Button>
         </li>
         <li>
           <Button variant='contained' color='primary'>
-            <Link to='/react-typescript-movie-app/popular'>인기</Link>
+            <Link to='/popular'>인기</Link>
           </Button>
         </li>
         <li>
           <Button variant='contained' color='primary'>
-            <Link to='/react-typescript-movie-app/nowplaying'>
-              현재 상영 중
-            </Link>
+            <Link to='/nowplaying'>현재 상영 중</Link>
           </Button>
         </li>
         <li>
           <Button variant='contained' color='primary'>
-            <Link to='/react-typescript-movie-app/upcoming'>개봉 예정</Link>
+            <Link to='/upcoming'>개봉 예정</Link>
           </Button>
         </li>
         <li>
           <Button variant='contained' color='primary'>
-            <Link to='/react-typescript-movie-app/topLate'>높은 평점</Link>
+            <Link to='/topLate'>높은 평점</Link>
           </Button>
         </li>
         <li>
