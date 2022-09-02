@@ -14,8 +14,8 @@ import MovieDetail from './components/movieDetail';
 import SearchMain from './pages/searchMain';
 
 function App() {
-  const { loading } = useSelector((state: any) => state.list);
   const dispatch = useDispatch();
+  const { loading } = useSelector((state: any) => state.list);
 
   useEffect(() => {
     dispatch({
